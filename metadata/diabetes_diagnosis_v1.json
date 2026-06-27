@@ -1,0 +1,11 @@
+{
+    "name": "diabetes_diagnosis",
+    "metrics": {
+        "fdr": 0.33,
+        "recall": 0.62
+    },
+    "version": 1,
+    "registration_date": "2026-06-27T15:02:51.191493",
+    "model": "diabetes_diagnosis_model_v1.joblib",
+    "features": "diabetes_diagnosis_features_v1.joblib"
+}

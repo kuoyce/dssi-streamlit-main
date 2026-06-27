@@ -70,8 +70,9 @@ def preprocess(df):
         Returns:
             df: Resultant dataframe after pre-processing
     """
-    df = log_txf(df, ['residential_assets_value','loan_amount'])
-    df['dep_cat'] = df['no_of_dependents'].map(remap_dependents)
+    if 'residential_assets_value' in df.columns and 'loan_amount' in df.columns:
+        df = log_txf(df, ['residential_assets_value','loan_amount'])
+        df['dep_cat'] = df['no_of_dependents'].map(remap_dependents)
     return df
 
 def run(data_path):
